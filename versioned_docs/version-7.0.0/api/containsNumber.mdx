@@ -1,0 +1,45 @@
+---
+title: containsNumber
+---
+
+import * as turf from "turf-next";
+import ExampleMap from "@site/src/components/ExampleMap";
+import WindowTurfGlobal from "@site/src/components/WindowTurfGlobal";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+<!-- Expose turf as global var for experimenting in the browser console -->
+
+<BrowserOnly>{() => <WindowTurfGlobal turf={turf} />}</BrowserOnly>
+
+### Description
+
+Checks if coordinates contains a number
+
+### Parameters
+
+| Name        | Type             | Description         |
+| ----------- | ---------------- | ------------------- |
+| coordinates | **Array\<any\>** | GeoJSON Coordinates |
+
+### Returns
+
+<ul>
+  **boolean** true if Array contains a number
+
+</ul>
+
+### Installation
+
+```javascript
+$ npm install @turf/invariant
+
+import { containsNumber } from "@turf/invariant";
+const result = containsNumber(...);
+```
+
+```javascript
+$ npm install @turf/turf
+
+import * as turf from "@turf/turf";
+const result = turf.containsNumber(...);
+```
