@@ -1,0 +1,43 @@
+---
+title: pt
+---
+
+import * as turf from "turf-6";
+import ExampleMap from "@site/src/components/ExampleMap";
+import WindowTurfGlobal from "@site/src/components/WindowTurfGlobal";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+<!-- Expose turf as global var for experimenting in the browser console -->
+
+<BrowserOnly>{() => <WindowTurfGlobal turf={turf} />}</BrowserOnly>
+
+### Description
+
+Translate Properties to final Point, priorities:
+
+1. options.properties
+1. inherent Point properties
+1. dist custom properties created by NearestPointToLine
+
+### Parameters
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+
+### Returns
+
+### Installation
+
+```javascript
+$ npm install @turf/nearest-point-to-line
+
+import { pt } from "@turf/nearest-point-to-line";
+const result = pt(...);
+```
+
+```javascript
+$ npm install @turf/turf
+
+import * as turf from "@turf/turf";
+const result = turf.pt(...);
+```
